@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int start, end, i, num, remainder, result;
+
+    printf("Enter starting number: ");
+    scanf("%d", &start);
+
+    printf("Enter ending number: ");
+    scanf("%d", &end);
+
+    for (i = start; i <= end; i++) {
+        num = i;
+        result = 0;
+
+        while (num > 0) {
+            remainder = num % 10;
+            result = result + (remainder * remainder * remainder);
+            num = num / 10;
+        }
+
+        if (result == i) {
+            printf("%d ", i);
+        }
+    }
+
+    return 0;
+}
