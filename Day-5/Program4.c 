@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int num, i, largest = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        num = -num;
+    }
+
+    for (i = 2; i <= num; i++) {
+        while (num % i == 0) {
+            largest = i;
+            num = num / i;
+        }
+    }
+
+    printf("Largest prime factor = %d\n", largest);
+
+    return 0;
+}
