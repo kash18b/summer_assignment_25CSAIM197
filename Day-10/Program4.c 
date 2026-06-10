@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int i, j;
+    int rows = 5; // Number of rows for the pyramid
+
+    for (i = 0; i < rows; i++) {
+        // Print leading spaces
+        for (j = 0; j < rows - i - 1; j++) {
+            printf(" ");
+        }
+
+        // Print ascending characters
+        for (j = 0; j <= i; j++) {
+            printf("%c", 'A' + j);
+        }
+
+        // Print descending characters
+        for (j = i - 1; j >= 0; j--) {
+            printf("%c", 'A' + j);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
